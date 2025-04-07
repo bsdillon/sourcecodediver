@@ -1,0 +1,31 @@
+{
+  "name": "sourcecodediver",
+  "version": "1.0.0",
+  "description": "![SourceCodeDiver Logo](/public/assets/scd_logo_thumb.png)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bsdillon/sourcecodediver.git"
+  },
+  "keywords": [
+    "quality"
+  ],
+  "author": "BrianDillon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bsdillon/sourcecodediver/issues"
+  },
+  "homepage": "https://github.com/bsdillon/sourcecodediver#readme",
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
