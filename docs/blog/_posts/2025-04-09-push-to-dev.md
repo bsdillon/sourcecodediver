@@ -13,3 +13,4 @@ So, I decided to start by following instructions at [this site](https://www.tani
 * Total of 8 versions of the app with progressively more interesting code and 'npm run build' to create the build folder which is a runable server and then 'npm start' that makes that server available.
 * The last part marries up with what I have been using npm for, adding dependencies to the package.json and then building. Might need to study these examples more, but that's enough for today.
 * Saving everything locally for reference material. At least until I understand it better.
+* I pushed everything up to dev and then master, had to move my pages from master/docs to master/root and I asked Chip to tell me how to put them all on the same page. So, I'm trying that and pushing again.
