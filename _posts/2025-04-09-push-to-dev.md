@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Pushing my work to dev"
+date:   2025-04-09
+categories: journal
+---
+One of the big challenges is learning to work with this system of branches. Really something I should have been doing all along, but because I only had two projects in 18 years where any sort of source control was used.... Anyway, today I'm going to finish my work and commit all the way to dev and then main, to show these posts are working and then create a feature branch to continue work on React.
+
+So, I decided to start by following instructions at [this site](https://www.taniarascia.com/getting-started-with-react/) which is about five years old and may be somewhat depricated, but it does offer a step-by-step process. I may learn something and Chip is just not very methodical.
+* Dang. Huge number of downloads. 1324 packages. Took about 5 minutes on my internet. Need to get that router moved.
+* Either the standard has changed or this code was wrong to begin with, but I've made several changes to make it run, based on what I learned from the original version downloaded from facebook (??).
+* Trying out the chrome extension for [react-dev-tools]("https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?pli=1").
+* Total of 8 versions of the app with progressively more interesting code and 'npm run build' to create the build folder which is a runable server and then 'npm start' that makes that server available.
+* The last part marries up with what I have been using npm for, adding dependencies to the package.json and then building. Might need to study these examples more, but that's enough for today.
+* Saving everything locally for reference material. At least until I understand it better.
