@@ -1,5 +1,5 @@
 # SourceCodeDiver
-![SourceCodeDiver Logo](scd_logo_thumb.png)
+![SourceCodeDiver Logo](/public/assets/scd_logo_thumb.png)
 
 **SourceCodeDiver** is a code review and visualization tool designed to help developers explore software architecture without a human in the loop. It generates layered UML diagrams from real-world source code and presents them in an interactive, explorable interface—what we call *Pan & Tilt* navigation. The goal: make large systems understandable at a glance, and in depth.
 

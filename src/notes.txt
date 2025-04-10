@@ -1,0 +1,3 @@
+Unlike the public folder, src is meant to be dynamically served. 
+Thus, it starts with the App.js just as flask started with an app.py.
+
