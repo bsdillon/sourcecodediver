@@ -1,1 +1,0 @@
-Public holds files that are meant to be served as-is with no further processing.
