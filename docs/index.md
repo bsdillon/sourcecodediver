@@ -38,7 +38,7 @@ title: Welcome
 <div class="container">
     <h1>Source Code Diver</h1>
     <p>Coming soon! We're working hard to bring you an awesome new tool for code analysis and visualization.</p>
-    <img src="./imgs/scd_logo.png" alt="Source Code Diver Logo" class="logo">
-    <p>Stay tuned for updates!</p>
-    <p>Follow the journey as we build it, step-by-step.</p>
+    <img src="../imgs/scd_logo.png" alt="Source Code Diver Logo" class="logo">
+    <p>Read documentation on our process <a href="training.html">here</a></p>
+    <p>Follow the journey as we build it, step-by-step. Stay tuned for updates!</p>
 </div>

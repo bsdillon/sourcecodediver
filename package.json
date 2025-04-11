@@ -1,15 +1,10 @@
 {
   "name": "sourcecodediver",
   "version": "1.0.0",
-  "description": "![SourceCodeDiver Logo](/public/assets/scd_logo_thumb.png)",
+  "description": "![SourceCodeDiver Logo](/src/imgs/scd_logo_thumb.png)",
   "main": "index.js",
   "directories": {
     "doc": "docs"
-  },
-  "scripts": {
-    "test": "jest",
-    "start": "node index.js",
-    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -23,9 +18,16 @@
   "bugs": {
     "url": "https://github.com/bsdillon/sourcecodediver/issues"
   },
-  "homepage": "https://github.com/bsdillon/sourcecodediver#readme",
+  "homepage": "/",
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   }
 }

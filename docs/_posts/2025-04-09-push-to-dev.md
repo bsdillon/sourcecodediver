@@ -15,6 +15,7 @@ So, I decided to start by following instructions at [this site](https://www.tani
 * Saving everything locally for reference material. At least until I understand it better.
 * I pushed everything up to dev and then master, had to move my pages from master/docs to master/root and I asked Chip to tell me how to put them all on the same page. So, I'm trying that and pushing again.
 * Had to do it a few times and finally got it handled. Success. I'll let Chip explain.
+* Blog achieved... although it needs to be a little prettier.
 
 ## From Chip
 <div style="background-color:white; color: darkblue; font-style: italic;">
