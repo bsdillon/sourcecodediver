@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>React Syntax Basics</title>
+  <link rel="stylesheet" href="../common.css" />
+</head>
+<body>
+    <h2>React Basic Syntax</h2>
+    <p>
+        This table goes through a set of incremental increases 
+        in complexity to showcase the basic syntax of the language. Special thanks to 
+        <a href="https://www.taniarascia.com/getting-started-with-react/">Tania</a> who
+        gave me a good start. I highly recommend this tutorial to the novice.
+    </p>
+    <table>
+        <colgroup>
+            <col>
+            <col style="width: 35%;">
+            <col>
+        </colgroup>
+        <tr>
+          <td>1.0</td>
+          <td>
+            <b>Hello World</b><br>
+            React accesses the Document Object Model (DOM) using <code>document</code> to get the 
+            <code>root</code> element. Within that element, it can <code>render</code> content.<br><br>
+            <code>index.js</code> is always the entrypoint into the React application. </code>While you <b>can</b> render code in this way, it is static and React offers much, 
+            much more than that.
+          </td>
+          <td>
+            <div class="bordered"><h3>index.js</h3><pre><code>
+    import React from 'react';
+    import ReactDOM from 'react-dom/client';
+    
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+        &lt;h1&gt;Hello World&lt;/h1&gt;
+    );
+            </code></pre></div>
+          </td>
+        </tr>
+        <tr>
+        <td>1.1</td>
+        <td>
+            <b>Component Abstraction</b><br>
+            In React, a component is a reusable, self-contained building block that defines how a user 
+            interface (UI) should appear and behave, either as a function or class, by rendering 
+            <nobr>JavaScript XML (JSX)</nobr> and optionally managing state and lifecycle events. 
+            React can render one or more components instead of raw HTML. The `App` component is imported 
+            using relative path syntax (`'./App'`).<br><br>
+            App is a functional component and JSX allows us to include it using self-closing tag 
+            syntax: <code>&lt;App&nbsp;/&gt;</code>. Note that the terminal <code>/&gt;</code> is required.<br><br>
+            While this is a slight improvement over the previous version, the rendered code is still static.
+        </td>
+        <td>
+            <div class="bordered"><h3>index.js</h3><pre><code>
+    import App from './App';
+    import React from 'react';
+    import ReactDOM from 'react-dom/client';
+    
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+        &lt;App /&gt;
+    );
+        </code></pre></div>
+        <br>
+        <div class="bordered"><h3>App.js</h3><pre><code>
+    function App() {
+    return (
+        &lt;h1&gt;Hello World&lt;/h1&gt;
+    );
+    }
+
+    export default App;
+            </code></pre></div>
+        </td>
+        </tr>
+        <tr>
+            <td>1.2</td>
+            <td>
+              <b>Passing Props</b><br>
+              React allows data to be passed into components using <b>props</b> (short for “properties”). In 
+              this version, the message <code>"Hello World"</code> is passed into the <code>App</code> component 
+              via the <code>message</code> prop. A prop is a full JavaScript Object which can have functions 
+              as we shall see in a second.<br><br>
+              Functional components receive props as their first argument. You can use a single object 
+              <code>props</code> or destructure directly, as shown here.<br><br> 
+              This introduces a key React pattern: components become more dynamic and reusable when driven by 
+              input data. The result here is the same, but it was accomplished by sending data. If the data
+              changed, so would the result.
+            </td>
+            <td>
+              <div class="bordered"><h3>index.js</h3><pre><code>
+        import App from './App';
+        import React from 'react';
+        import ReactDOM from 'react-dom/client';
+        
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(
+            &lt;App message="Hello World" /&gt;
+        );
+              </code></pre></div>
+              <br>
+              <div class="bordered"><h3>App.js</h3><pre><code>
+        function App({ message }) {
+        return (
+            &lt;h1&gt;{message}&lt;/h1&gt;
+        );
+        }
+        
+        export default App;
+              </code></pre></div>
+            </td>
+        </tr>
+        <tr>
+            <td>2.0</td>
+            <td>
+              <b>Interactivity via Callback</b><br>
+              To make the UI dynamic, we can pass a function to the component as a prop. When 
+              invoked inside the component—such as via a button click—it updates the state or 
+              triggers an action. This pattern keeps the logic flexible and modular.<br><br>
+              Here we introduce the Container that defines both the message and the change process. In the 
+              first line we call <code>useState</code> which returns both the <b>state variable</b> and a
+              function hook to update that variable. These are built into the React language, but we can
+              define the names of the two members. Later the <code>toggleMessage</code> will use the 
+              setMessage function to change that text.<br><br>
+              This is where React earned its name. Initially React creates a <b>Virtual</b> DOM where all
+              the components are described. When <code>setMessage</code> is called, it updates the 
+              component's state and a new Virtual DOM is created with the updated state. React then compares
+              the two Virtual DOMs and detects which elements (e.g. the <code>h1</code>) have changed. This is called <b>reconciliation</b>
+              Now React will apply any changes to the actual DOM, but only the elements that need the change.<br><br>
+              React enhances efficiency by only updating the specific parts of the UI that have changed, 
+              rather than reloading the entire page. Moreover, all the updates are done in memory only 
+              and not on the screen so you only observe the limited changes that are made to the actual DOM. This  
+              selective rendering, facilitated by the virtual DOM, ensures faster updates and a more responsive 
+              user experience.
+            </td>
+            <td>
+              <div class="bordered"><h3>index.js</h3><pre><code>
+        import React, { useState } from 'react';
+        import ReactDOM from 'react-dom/client';
+        import Container from './Container';
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(&lt;Container /&gt;);
+            </code></pre></div>
+            <br>
+            <div class="bordered"><h3>Container.js</h3><pre><code>
+        import React, { useState } from 'react';
+        import App from './App';
+        
+        function Container() {
+            const [message, setMessage] = useState("Hello World");
+        
+            const toggleMessage = () =&gt; {
+                setMessage((prev) =&gt; prev === "Hello World" ? "Goodbye World" : "Hello World");
+            };
+        
+            return &lt;App message={message} onClick={toggleMessage} /&gt;;
+        }
+        
+        export default Container;
+            </code></pre></div>
+            <br>
+            <div class="bordered"><h3>App.js</h3><pre><code>
+        function App(props) {
+        return (
+            &lt;div&gt;
+            &lt;h1&gt;{props.message}&lt;/h1&gt;
+            &lt;button onClick={props.onClick}&gt;Toggle&lt;/button&gt;
+            &lt;/div&gt;
+        );
+        }
+        
+        export default App;
+              </code></pre></div>
+            </td>
+        </tr>
+    </table>
+
+    <h2>Other Features of Interest</h2>
+    <p>As we have time, we'll explore other important aspects of React including:</p>
+    <ul>
+        <li>Component Lifecycle Methods and Hooks</li>
+        <li>Conditional Rendering</li>
+        <li>Lists and Keys</li>
+        <li>Context API</li>
+        <li>Refs</li>
+        <li>React Router</li>
+        <li>Error Boundaries</li>
+        <li>Higher-Order Components</li>
+        <li>Code Splitting</li>
+        <li>State Managmeent with Redux (and others)</li>
+    </ul>
+</body>
+</html>
