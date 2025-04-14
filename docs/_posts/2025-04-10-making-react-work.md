@@ -7,17 +7,17 @@ categories: journal
 So on the agenda for today is getting my own version of a react app working. First, I'm going to form the right structure in its own folder that I can run 'npm run build' against and extract into its own server with a Dockerfile. This is intentional so that each folder in the project can hold part of what we are building.
 
 I put together some basic files in this structure. I'm going to use the react_Dockerfile to compose everything.
-.\imgs\scd_logo.png
-.\react_Dockerfile
-.\react-front\
-├── public
-│   └── index.html
-├── src
-│   ├── imgs
-│   │   └── <EMPTY>
-│   ├── Clock.js
-│   ├── common.css
-│   ├── index.js
+.\imgs\scd_logo.png \
+.\react_Dockerfile \
+.\react-front\ \
+├── public \
+│   └── index.html \
+├── src \
+│   ├── imgs \
+│   │   └── EMPTY \
+│   ├── Clock.js \
+│   ├── common.css \
+│   ├── index.js \
 │   └── Welcome.js
 
 * I had to improve the dockerfile to pull everyhting in and build it correctly.

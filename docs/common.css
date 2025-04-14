@@ -1,0 +1,38 @@
+table td {
+    vertical-align: top;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+table td, table th {
+    border: 1px solid #44f;
+    padding: 8px;
+}
+
+code {
+    color: #d00;
+    font-family: monospace;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+.bordered {
+    border: 2px solid black;  /* Adjust the border width and color */
+    border-radius: 12px;      /* Adjust the radius to make the corners more or less rounded */
+}
+
+h3 {
+    padding-left: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+pre {
+    margin-top: 0;
+    margin-bottom: 0;
+}
