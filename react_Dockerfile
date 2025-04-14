@@ -10,7 +10,7 @@ RUN npm install
 
 # Build everything
 COPY ./react-front/ .
-COPY ./imgs/scd_logo.png ./src/imgs/scd_logo.png
+COPY ./docs/imgs/scd_logo.png ./src/imgs/scd_logo.png
 RUN npm run build
 
 # We're using the official Nginx image to serve the React build folder
